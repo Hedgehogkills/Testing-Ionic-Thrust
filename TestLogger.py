@@ -12,7 +12,7 @@ def push_data_to_cloud(data_logged, date_time_array, cmd, testName):
     scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets',
              "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
 
-    creds_sample = service_account.Credentials.from_service_account_file("/home/longlost/ISEF Proj/tensometric_beam/Tensometer_test_code/creds.json").with_scopes(scope)
+    creds_sample = service_account.Credentials.from_service_account_file("----------------your-file-location-------------").with_scopes(scope)
     client = gspread.authorize(creds_sample)
     sheet = client.open("DataLog") # Google sheet used to log all tests
 
